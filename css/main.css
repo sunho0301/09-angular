@@ -1,0 +1,28 @@
+img, p, form {
+	padding-bottom: 1em;
+}
+
+.big {
+	font-size: larger;
+}
+
+.purple {
+	color: rebeccapurple;
+}
+
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
+
+.story {
+	background:lightblue;
+	padding:20px;
+	margin:40px 20px;
+	font-size:20px;
+	font-style:italic;
+	border-radius: 10px;
+}

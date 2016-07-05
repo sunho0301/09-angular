@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Madlibs!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="container">
+
+  <h1><img src="img/madlibslogo.png"></h1>
+
+  <p class="lead">Enter words to create a story!</p>
+  <form>
+    <label for="firstNoun">A noun:</label>
+    <input name="firstNoun" id="firstNoun">
+    <br/>
+    <label for="name">A name:</label>
+    <input name="name" id="name">
+    <br/>
+    <label for="pronoun">A pronoun:</label>
+    <input name="pronoun" id="pronoun">
+    <br/>
+    <label for="verb">A verb (past tense):</label>
+    <input name="verb" id="verb">
+    <br/>
+    <label for="secondNoun">Another noun:</label>
+    <input name="secondNoun" id="secondNoun">
+    <br/>
+    <button type="button" class="btn btn-default">Show story</button>
+  </form>
+
+  <div id="currentStory" class="story hidden">
+    <p>Once upon a time there was a [noun] named [name]. One day, [pronoun] [verb (past tense)] a [noun], and lived happily ever after.</p>
+  </div>
+
+  <!-- load your script file! -->
+  <script src="js/madlib.js"></script>
+</body>
+</html>
