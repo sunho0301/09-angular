@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE>
+<html lang="en" ng-app="MoviesApp"> <!-- defines what application we want to use-->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +10,29 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="container">
+<body class="container" ng-controller="MoviesCtrl">
 
 	<h1>Movie Data Browser</h1>
 	<p class="lead">Movies released during 2015</p>
 
-  <section class="demo well">
+  <section class="demo well" ng-if="showDemo">
     <h2>Angular Demo here</h2>
+		
+		<p>Message: <input type="text" ng-model="message"></p>
+
+		<p ng-bind="message"></p>
+		
+		<p>Showing {{movies.length}} movies</p>
+
+		<ul>
+			<li ng-repeat="movie in movies">
+				{{movie.title}} {{movie.year}}
+			</li>
+		</ul>
+
+		<button type="button" ng-click="sayHello()">Say Hello</button>
+		<button type='button' ng-click="reset()">Reset</button>
+
   </section>
 
   <form role="form" class="form-inline">
@@ -41,6 +57,8 @@
 		</tr>
 	</table>
 
+	<!-- load angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 	<!-- load our script -->
 	<script src="data/movies-2015.js"></script>
 	<!-- load our script -->
